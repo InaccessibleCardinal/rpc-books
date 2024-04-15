@@ -1,4 +1,7 @@
-package main
+//go:build integration
+// +build integration
+
+package testclient
 
 import (
 	"context"

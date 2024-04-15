@@ -3,6 +3,8 @@ dev1:
 dev2:
 	go run ./cmd/server/...
 test:
-	go test ./... -coverprofile cover.out
+	go test ./... -coverprofile cover.out | grep -v /gen
+test_int:
+	go test -tags=integration ./internal/integrations/... 
 cov:
 	go tool cover -func cover.out
