@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package book.v1;
+
+option go_package = "rpc-books/gen/book/v1;bookv1";
+
+message Book {
+    string title = 2;
+    string author = 3;
+    string isbn = 4;
+    bool purchased = 5;
+    string category = 6;
+    float price = 7;
+}
+
+message GetBooksByTitleRequest {
+    string title = 1;
+}
+message GetBooksByTitleResponse {
+    Book book = 1;
+}
+message GetBooksByISBNRequest {
+    string isbn = 1;
+}
+message GetBooksByISBNResponse {
+    Book book = 1;
+}
+message GetBooksByAuthorRequest {
+    string author = 1;
+}
+message GetBooksByAuthorResponse {
+    repeated Book book = 1;
+}
+
+service BookService {
+    rpc GetBooksByTitle(GetBooksByTitleRequest) returns (GetBooksByTitleResponse) {}
+    rpc GetBooksByISBN(GetBooksByISBNRequest) returns (GetBooksByISBNResponse) {}
+    rpc GetBooksByAuthor(GetBooksByAuthorRequest) returns (GetBooksByAuthorResponse) {}
+}
