@@ -63,7 +63,6 @@ func (ex *ExcelService) makeTable(f *excelize.File, rows [][]string) []map[strin
 func (ex *ExcelService) getCellHyperlink(f *excelize.File, cell string) string {
 	ok, h, err := f.GetCellHyperLink(ex.Sheet, cell)
 	if err != nil {
-		fmt.Println("err getting hyperlink: ", err)
 		return ""
 	}
 	if ok {

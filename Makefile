@@ -8,3 +8,6 @@ test_int:
 	go test -tags=integration ./internal/integrations/... 
 cov:
 	go tool cover -func cover.out
+
+covh:
+	go tool cover -html=cover.out
