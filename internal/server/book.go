@@ -10,13 +10,17 @@ import (
 	"connectrpc.com/connect"
 )
 
+type ExcelHandler interface {
+	GetTable() ([]map[string]excel.Cell, error)
+}
+
 type BookServer struct {
 	bookv1connect.UnimplementedBookServiceHandler
 
-	excelService *excel.ExcelService
+	excelService ExcelHandler
 }
 
-func New(excelService *excel.ExcelService) *BookServer {
+func New(excelService ExcelHandler) *BookServer {
 	
 	return &BookServer{excelService: excelService}
 }

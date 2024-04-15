@@ -3,6 +3,16 @@ rpc-books/internal/env/load.go:9.32,11.16 2 1
 rpc-books/internal/env/load.go:11.16,12.13 1 1
 rpc-books/internal/env/load.go:14.2,15.29 2 1
 rpc-books/internal/env/load.go:15.29,19.3 2 1
+rpc-books/internal/server/book.go:23.49,26.2 1 1
+rpc-books/internal/server/book.go:30.114,33.16 3 1
+rpc-books/internal/server/book.go:33.16,35.3 1 1
+rpc-books/internal/server/book.go:36.2,36.78 1 1
+rpc-books/internal/server/book.go:39.79,41.16 2 1
+rpc-books/internal/server/book.go:41.16,43.3 1 1
+rpc-books/internal/server/book.go:44.2,44.32 1 1
+rpc-books/internal/server/book.go:44.32,45.37 1 1
+rpc-books/internal/server/book.go:45.37,47.4 1 1
+rpc-books/internal/server/book.go:49.2,49.42 1 1
 rpc-books/internal/service/excel/excel.go:21.75,23.2 1 1
 rpc-books/internal/service/excel/excel.go:25.63,26.24 1 1
 rpc-books/internal/service/excel/excel.go:26.24,28.17 2 1
