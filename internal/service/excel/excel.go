@@ -59,6 +59,15 @@ func (ex *ExcelService) makeTable(f *excelize.File, rows [][]string) []map[strin
 	return table
 }
 
+func findBookIndex(books []map[string]Cell, title string) int {
+	for i, book := range books {
+		if book["Title"].Text == title {
+			return i
+		}
+	}
+	return -1
+}
+
 
 func (ex *ExcelService) getCellHyperlink(f *excelize.File, cell string) string {
 	ok, h, err := f.GetCellHyperLink(ex.Sheet, cell)
@@ -69,4 +78,25 @@ func (ex *ExcelService) getCellHyperlink(f *excelize.File, cell string) string {
 		return h
 	}
 	return ""
+}
+
+func (ex *ExcelService) AddBook(book map[string]Cell) {
+	ex.table = append(ex.table, book)
+}
+
+func (ex *ExcelService) DeleteBook(title string) (didSucceed bool) {
+	didSucceed = true
+	booksTable, err := ex.GetTable()
+	if err != nil {
+		return !didSucceed
+	}
+	idx := findBookIndex(booksTable, title)
+	if idx < 0 {
+		return !didSucceed
+	}
+	books1 := booksTable[:idx]
+	books2 := booksTable[idx+1:]
+	books1 = append(books1, books2...)
+	ex.table = books1
+	return didSucceed
 }
