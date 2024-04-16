@@ -80,8 +80,9 @@ func (ex *ExcelService) getCellHyperlink(f *excelize.File, cell string) string {
 	return ""
 }
 
-func (ex *ExcelService) AddBook(book map[string]Cell) {
+func (ex *ExcelService) AddBook(book map[string]Cell) int {
 	ex.table = append(ex.table, book)
+	return len(ex.table)
 }
 
 func (ex *ExcelService) DeleteBook(title string) (didSucceed bool) {
@@ -95,8 +96,7 @@ func (ex *ExcelService) DeleteBook(title string) (didSucceed bool) {
 		return !didSucceed
 	}
 	books1 := booksTable[:idx]
-	books2 := booksTable[idx+1:]
-	books1 = append(books1, books2...)
+	books1 = append(books1, booksTable[idx+1:]...)
 	ex.table = books1
 	return didSucceed
 }

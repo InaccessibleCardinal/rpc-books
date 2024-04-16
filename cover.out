@@ -1,4 +1,5 @@
 mode: set
+rpc-books/cmd/inter/main.go:3.14,5.2 0 0
 rpc-books/internal/env/load.go:9.32,11.16 2 1
 rpc-books/internal/env/load.go:11.16,12.13 1 1
 rpc-books/internal/env/load.go:14.2,15.29 2 1
@@ -20,7 +21,7 @@ rpc-books/internal/service/excel/excel.go:28.17,30.4 1 1
 rpc-books/internal/service/excel/excel.go:31.3,33.17 3 1
 rpc-books/internal/service/excel/excel.go:33.17,35.4 1 0
 rpc-books/internal/service/excel/excel.go:36.3,37.20 2 1
-rpc-books/internal/service/excel/excel.go:39.2,39.22 1 0
+rpc-books/internal/service/excel/excel.go:39.2,39.22 1 1
 rpc-books/internal/service/excel/excel.go:42.88,45.31 3 1
 rpc-books/internal/service/excel/excel.go:45.31,47.29 2 1
 rpc-books/internal/service/excel/excel.go:47.29,51.23 4 1
@@ -28,8 +29,18 @@ rpc-books/internal/service/excel/excel.go:51.23,53.5 1 1
 rpc-books/internal/service/excel/excel.go:54.4,54.16 1 1
 rpc-books/internal/service/excel/excel.go:56.3,56.28 1 1
 rpc-books/internal/service/excel/excel.go:58.2,59.14 2 1
-rpc-books/internal/service/excel/excel.go:63.80,65.16 2 1
-rpc-books/internal/service/excel/excel.go:65.16,67.3 1 1
-rpc-books/internal/service/excel/excel.go:68.2,68.8 1 1
-rpc-books/internal/service/excel/excel.go:68.8,70.3 1 1
-rpc-books/internal/service/excel/excel.go:71.2,71.11 1 1
+rpc-books/internal/service/excel/excel.go:62.63,63.29 1 1
+rpc-books/internal/service/excel/excel.go:63.29,64.34 1 1
+rpc-books/internal/service/excel/excel.go:64.34,66.4 1 1
+rpc-books/internal/service/excel/excel.go:68.2,68.11 1 1
+rpc-books/internal/service/excel/excel.go:72.80,74.16 2 1
+rpc-books/internal/service/excel/excel.go:74.16,76.3 1 1
+rpc-books/internal/service/excel/excel.go:77.2,77.8 1 1
+rpc-books/internal/service/excel/excel.go:77.8,79.3 1 1
+rpc-books/internal/service/excel/excel.go:80.2,80.11 1 1
+rpc-books/internal/service/excel/excel.go:83.59,86.2 2 1
+rpc-books/internal/service/excel/excel.go:88.68,91.16 3 1
+rpc-books/internal/service/excel/excel.go:91.16,93.3 1 0
+rpc-books/internal/service/excel/excel.go:94.2,95.13 2 1
+rpc-books/internal/service/excel/excel.go:95.13,97.3 1 1
+rpc-books/internal/service/excel/excel.go:98.2,101.19 4 1
