@@ -11,3 +11,6 @@ cov:
 
 covh:
 	go tool cover -html=cover.out
+
+inter:
+	go run ./cmd/inter/...

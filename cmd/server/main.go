@@ -18,6 +18,7 @@ import (
 var (
 	addr = "localhost:9999"
 )
+
 func init() {
 	f, err := os.Open(".env")
 	if err != nil {
