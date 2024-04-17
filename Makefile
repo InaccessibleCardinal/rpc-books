@@ -14,3 +14,9 @@ covh:
 
 inter:
 	go run ./cmd/inter/...
+
+buildui:
+	(cd ./cmd/webui; GOARCH=wasm GOOS=js go build -o web/app.wasm; go build)
+
+runui: buildui
+	./cmd/webui/webui.exe

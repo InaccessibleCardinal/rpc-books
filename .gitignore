@@ -3,3 +3,6 @@
 .env
 
 *.xlsx
+
+**/*.wasm
+**/*.exe
